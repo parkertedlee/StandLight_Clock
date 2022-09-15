@@ -15,7 +15,7 @@ private:
     Led *light3;
     Led *light4;
     Led *light5;
-    char buff[30];
+    
     LCD *lcd;
 
 public:

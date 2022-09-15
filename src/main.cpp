@@ -16,7 +16,8 @@
 int main()
 {
     std::cout << "Hello World!" << std::endl;
-    Button button1(27);
+    Button modeButton(27);
+    Button powerButton(28);
     ClockCheck clockCheck;
     Led led1(21);
     Led led2(22);
@@ -29,7 +30,7 @@ int main()
     Service service(&view);
     ClockService clockService(&clockView);
     Controller control(&service, &clockService);
-    Listener listener(&button1, &control, &clockCheck);
+    Listener listener(&modeButton, &powerButton, &control, &clockCheck);
     
     while (1)
     {

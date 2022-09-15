@@ -8,12 +8,13 @@
 class Listener
 {
 private :
+    Button *modeButton;
     Button *powerButton;
     Controller *controller;
     ClockCheck *clockCheck;
 
 public:
-    Listener(Button *button, Controller *control, ClockCheck *clock);
+    Listener(Button *modeButton ,Button *button, Controller *control, ClockCheck *clock);
     ~Listener();
     void checkEvent();
 };
